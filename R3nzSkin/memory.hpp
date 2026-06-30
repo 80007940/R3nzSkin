@@ -51,7 +51,7 @@ private:
 	{
 		{
 			{
-				"48 8B 05 ? ? ? ? 4C 8B FA 83 78 0C 02"
+				"48 8B 05 ? ? ? ? C7 ? ? ? ? ? ? 80 3D"
 			}, true, false, true, 0, &offsets::global::GameClient
 		}
 	};
@@ -60,32 +60,32 @@ private:
 	{
 		{
 			{
-				"48 8B 3D ? ? ? ? 48 3B CF"
+		"48 8B 0D ?? ?? ?? ?? 48 85 C9"
 			}, true, false, true, 0, &offsets::global::Player
 		},
 		{
 			{
-				"48 8B 05 ? ? ? ? 48 8B 78 08 8B 40 10 4C 8D 3C C7 49 3B FF"
+				"48 8B 05 ? ? ? ? 48 8B 78 08 8B 40 10 4C 8D 3C C7 49"
 			}, true, false, true, 0, &offsets::global::ManagerTemplate_AIHero_
 		},
 		{
 			{
-				"48 8B 0D ? ? ? ? 48 69 D0 ? ? 00 00 48 8B 05"
+				"48 89 0D ? ? ? ? 48 8D 05 ? ? ? ? 48 89 01 4C 8B F9"
 			}, true, false, true, 0, &offsets::global::ChampionManager
 		},
 		{
 			{
-				"48 8B 0D ? ? ? ? E8 ? ? ? ? E8 ? ? ? ? E8 ? ? ? ? 48 8B C8 48 8B 10"
+				"48 8B 0D ? ? ? ? 48 8D ? ? ?  48 85 C9 48 8D 41 ? 48 0F 44 C3"
 			}, true, false, true, 0, &offsets::global::ManagerTemplate_AIMinionClient_
 		},
 		{
 			{
-				"48 8B 1D ? ? ? ? 48 8B 5B 28 48 85 DB"
+				"48 8B 0D ? ? ? ? E8 ? ? ? ? 48 8B ? ? ? ? ? E8 ? ? ? ? 80 3D"
 			}, true, false, true, 0, &offsets::global::ManagerTemplate_AITurret_
 		},
 		{
 			{
-				"48 8B 0D ? ? ? ? FF 15 ? ? ? ? 48 8B 05 ? ? ? ?"
+				"48 8B 0D ? ? ? ? FF 15 ? ? ? ? 48 8B 05"
 			}, true, false, true, 0, &offsets::global::Riot__g_window
 		},
 		{
@@ -95,7 +95,7 @@ private:
 		},
 		{
 			{
-				"40 38 BB ? ? 00 00 0F 85 ? ? 00 00 66 C7 83 ? ? ? ? ? ? 0F 31 48 C1 E2 20 4C 8D 83 ? ? 00 00 48 0B C2 44 8B CF 48 89 44 24 38 8B D7"
+			"88 86 ? ? ? ? 48 ? ? ?  0F B6 ? ? 88 86 ? ? ? ? 0F B6 ? ? 88 86 ? ? ? ? 0F B6 ? ? 88 86 ? ? ? ? 40"
 			}, false, true, false, 0, &offsets::AIBaseCommon::SkinId
 		},
 		{
@@ -105,17 +105,17 @@ private:
 		},
 		{
 			{
-				"E8 ? ? ? ? 48 8D 8D ? ? 00 00 E8 ? ? ? ? 48 85 C0 74 ? 48 85 ED"
+				"E8 ? ? ? ? 48 8D 8D ? ? ? ? E8 ? ? ? ? 48 85 C0"
 			}, true, false, false, 0, &offsets::functions::CharacterDataStack__Push
 		},
 		{
 			{
-				"88 54 24 10 53 55 56 57 41 54 41 55 41 56 41"
+			"E8 ? ? ? ? 48 8B ? ? ? ? ? 48 8B 01 48 83 ? ? ? 48"
 			}, true, false, false, 0, &offsets::functions::CharacterDataStack__Update
 		},
 		{
 			{
-				"E8 ? ? ? ? 8B 57 44"
+				"E8 ? ? ? ? 48 8D 15 ? ? ? ? 48 8B D8 48 8B 08 4C 8B 81"
 			}, true, false, false, 0, &offsets::functions::Riot__Renderer__MaterialRegistry__GetSingletonPtr
 		},
 		{
@@ -125,7 +125,7 @@ private:
 		},
 		{
 			{
-				"E8 ? ? ? ? 4C 3B F8 0F 94 C0"
+				"E8 ? ? ? ? 4C 3B F0 0F 94 C0"
 			}, true, false, false, 0, &offsets::functions::GetGoldRedirectTarget
 		}
 	};
