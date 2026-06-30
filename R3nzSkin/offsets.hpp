@@ -6,7 +6,7 @@ namespace offsets {
 	namespace GameObject {
 		namespace VTable {
 			enum {
-				IsLaneMinion = 0xEB, // E8 ? ? ? ? 84 C0 0F 84 ? ? ? ? 39 1F
+				IsLaneMinion = 0xF0, // E8 ? ? ? ? 84 C0 0F 84 ? ? ? ? 39 1F
 				IsEliteMinion = IsLaneMinion + 0x1,
 				IsEpicMinion = IsEliteMinion + 0x1,
 				IsMinion = IsEpicMinion + 0x4,
@@ -14,12 +14,13 @@ namespace offsets {
 			};
 		};
 		enum {
-			Team = 0x3C,
-			Name = 0x60
+			Team = 0x251,
+			Name = 0x68
 		};
 	};
 
 	namespace global {
+		inline std::uint64_t ZoomInstance{ 0 };
 		inline std::uint64_t Player{ 0 };
 		inline std::uint64_t ChampionManager{ 0 };
 		inline std::uint64_t Riot__g_window{ 0 };
